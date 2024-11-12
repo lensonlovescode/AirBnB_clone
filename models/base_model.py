@@ -22,10 +22,9 @@ class BaseModel():
         returns a dictionary containing
         all keys/values of __dict__ of the instance
         """
-        dict_rep = {key:value for key, value in self.__dict__.items()}
+        dict_rep = {key: value for key, value in self.__dict__.items()}
 
         dict_rep['__class__'] = self.__class__.__name__
         dict_rep['created_at'] = self.created_at.isoformat()
         dict_rep['updated_at'] = self.updated_at.isoformat()
         return (dict_rep)
-
