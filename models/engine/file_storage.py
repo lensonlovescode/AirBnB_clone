@@ -24,7 +24,7 @@ class FileStorage():
         """
         sets in __objects the obj with key <obj class name>.id
         """
-        key = obj.__class__.__name__ + . + obj.id
+        key = obj.__class__.__name__ + "." + obj.id
         FileStorage.__objects[key] = obj
 
     def save(self):
@@ -43,6 +43,7 @@ class FileStorage():
         otherwise, do nothing.
         If the file doesn’t exist, no exception should be raised
         """
+        from models import BaseModel
         try:
             with open(FileStorage.__file_path, 'r') as f:
                 dict_objs = json.loads(f.read())
