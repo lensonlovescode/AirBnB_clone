@@ -7,8 +7,8 @@ and delete objects for various classes in the project
 """
 import cmd
 from models.base_model import BaseModel
+from models.user import User
 from models import storage
-
 
 class HBNBCommand(cmd.Cmd):
     """
@@ -35,7 +35,7 @@ class HBNBCommand(cmd.Cmd):
             return
 
         class_name = args[0]
-        valid_classes = ["BaseModel"]
+        valid_classes = ["BaseModel", "User"]
 
         if class_name not in valid_classes:
             print("** class doesn't exist **")
@@ -60,7 +60,7 @@ class HBNBCommand(cmd.Cmd):
             print("** instance id missing **")
             return
 
-        valid_classes = ["BaseModel"]
+        valid_classes = ["BaseModel", "User"]
         full_key = args[0] + "." + args[1]
         class_name = args[0]
 
