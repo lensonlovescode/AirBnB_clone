@@ -43,5 +43,25 @@ class HBNBCommand(cmd.Cmd):
         obj.save
         print(f"{obj.id}")
 
+    def do_quit(self, arg):
+        """
+        Quit command to exit the program.
+        """
+        return True
+
+    def do_EOF(self, arg):
+        """
+        Exit the program once end of file.
+        """
+        return True
+
+    def emptyline(self):
+        """
+        Override the default behaviour of executing the last command
+        when an empty line is entered.
+        """
+        pass
+
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
