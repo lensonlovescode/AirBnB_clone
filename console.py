@@ -7,6 +7,7 @@ and delete objects for various classes in the project
 """
 import cmd
 from models.base_model import BaseModel
+from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
@@ -34,13 +35,14 @@ class HBNBCommand(cmd.Cmd):
             return
 
         class_name = args[0]
-        try:
-            obj = eval(f"{class_name}()")
-            print(f"{obj.id}")
-        except NameError as e:
+        valid_classes = ["BaseModel"]
+
+        if class_name not in valid_classes:
             print("** class doesn't exist **")
             return
-        obj.save
+
+        obj = eval(f"{class_name}()")
+        obj.save()
         print(f"{obj.id}")
 
     def do_quit(self, arg):
@@ -61,6 +63,36 @@ class HBNBCommand(cmd.Cmd):
         when an empty line is entered.
         """
         pass
+    def do_show(self, arg):
+        """
+        Prints the string representation of an instance
+        based on the class name and id.
+        Usage: show BaseModel 1234-1234-1234.
+        """
+        args = arg.split()
+
+        if len(args) < 1:
+            print("** class name missing **")
+            return
+        if len(args) == 1:
+            print("** instance id missing **")
+            return
+
+        valid_classes = ["BaseModel"]
+        full_key = args[0] + "." + args[1]
+        class_name = args[0]
+
+        if class_name not in valid_classes:
+            print("** class doesn't exist **")
+            return
+        objs = storage.all()
+
+        obj = objs.get(full_key)
+
+        if obj is None:
+            print("** no instance found **")
+            return
+        print(obj.__str__())
 
 
 if __name__ == '__main__':
