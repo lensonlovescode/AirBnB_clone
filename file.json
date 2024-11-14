@@ -1,0 +1,50 @@
+{
+    "BaseModel.010c2cf7-9f76-47d1-84c9-0a109016e15e": {
+        "id": "010c2cf7-9f76-47d1-84c9-0a109016e15e",
+        "created_at": "2024-11-14T17:05:07.669949",
+        "updated_at": "2024-11-14T17:05:07.670048",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.947ff3c4-35b2-45bb-a7d4-de76f3687a0d": {
+        "id": "947ff3c4-35b2-45bb-a7d4-de76f3687a0d",
+        "created_at": "2024-11-14T17:05:08.988019",
+        "updated_at": "2024-11-14T17:05:08.988039",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.ce2beeec-4f01-4566-b8ce-86937d9a5ccd": {
+        "id": "ce2beeec-4f01-4566-b8ce-86937d9a5ccd",
+        "created_at": "2024-11-14T17:05:09.477385",
+        "updated_at": "2024-11-14T17:05:09.477407",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.b015329a-be9b-48f8-a61f-4253bc513e12": {
+        "id": "b015329a-be9b-48f8-a61f-4253bc513e12",
+        "created_at": "2024-11-14T17:05:09.687587",
+        "updated_at": "2024-11-14T17:05:09.687610",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.918b76f7-a2e5-4d39-93fb-7718754535d3": {
+        "id": "918b76f7-a2e5-4d39-93fb-7718754535d3",
+        "created_at": "2024-11-14T17:05:10.086678",
+        "updated_at": "2024-11-14T17:05:10.086696",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.158dc3bc-2e79-4335-b246-72ea83e88c51": {
+        "id": "158dc3bc-2e79-4335-b246-72ea83e88c51",
+        "created_at": "2024-11-14T17:05:10.380484",
+        "updated_at": "2024-11-14T17:05:10.380510",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.bb53d3d2-c50e-4cd5-96e1-e2da9934eb17": {
+        "id": "bb53d3d2-c50e-4cd5-96e1-e2da9934eb17",
+        "created_at": "2024-11-14T17:05:10.685894",
+        "updated_at": "2024-11-14T17:05:10.685918",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.ce6e99e9-cacb-4921-b3f8-ac4729d89820": {
+        "id": "ce6e99e9-cacb-4921-b3f8-ac4729d89820",
+        "created_at": "2024-11-14T17:05:11.135105",
+        "updated_at": "2024-11-14T17:05:11.135164",
+        "__class__": "BaseModel"
+    }
+}
