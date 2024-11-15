@@ -10,6 +10,7 @@ from models.base_model import BaseModel
 from models.user import User
 from models import storage
 
+
 class HBNBCommand(cmd.Cmd):
     """
     This class provides command-line interface commands to create, retrieve,
@@ -63,6 +64,7 @@ class HBNBCommand(cmd.Cmd):
         when an empty line is entered.
         """
         pass
+
     def do_show(self, arg):
         """
         Prints the string representation of an instance
