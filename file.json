@@ -1,10 +1,4 @@
 {
-    "BaseModel.010c2cf7-9f76-47d1-84c9-0a109016e15e": {
-        "id": "010c2cf7-9f76-47d1-84c9-0a109016e15e",
-        "created_at": "2024-11-14T17:05:07.669949",
-        "updated_at": "2024-11-14T17:05:07.670048",
-        "__class__": "BaseModel"
-    },
     "BaseModel.947ff3c4-35b2-45bb-a7d4-de76f3687a0d": {
         "id": "947ff3c4-35b2-45bb-a7d4-de76f3687a0d",
         "created_at": "2024-11-14T17:05:08.988019",
@@ -253,6 +247,55 @@
         "id": "1db4fa09-ae09-4920-9bd2-64a59ddc53cd",
         "created_at": "2024-11-14T18:19:55.480959",
         "updated_at": "2024-11-14T18:19:55.480979",
+        "__class__": "BaseModel"
+    },
+    "User.7cefa049-7c90-4be8-ba70-2facc3bfa152": {
+        "id": "7cefa049-7c90-4be8-ba70-2facc3bfa152",
+        "created_at": "2024-11-16T02:17:10.429382",
+        "updated_at": "2024-11-16T02:17:10.429523",
+        "first_name": "Betty",
+        "last_name": "Bar",
+        "email": "airbnb@mail.com",
+        "password": "root",
+        "__class__": "User"
+    },
+    "User.e0a1d892-db08-41d3-9ed1-a9d8b448eef2": {
+        "id": "e0a1d892-db08-41d3-9ed1-a9d8b448eef2",
+        "created_at": "2024-11-16T02:17:10.432193",
+        "updated_at": "2024-11-16T02:17:10.432221",
+        "first_name": "John",
+        "email": "airbnb2@mail.com",
+        "password": "root",
+        "__class__": "User"
+    },
+    "BaseModel.cf4532c0-a1c9-4558-9276-9e951e8e3e48": {
+        "id": "cf4532c0-a1c9-4558-9276-9e951e8e3e48",
+        "created_at": "2024-11-16T03:00:05.603469",
+        "updated_at": "2024-11-16T03:00:05.603542",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.84ae6f11-4ace-411f-9afa-2b4694ce6a9c": {
+        "id": "84ae6f11-4ace-411f-9afa-2b4694ce6a9c",
+        "created_at": "2024-11-16T03:00:37.782233",
+        "updated_at": "2024-11-16T03:00:37.782272",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.43530788-a02e-4837-9767-0ef86a405307": {
+        "id": "43530788-a02e-4837-9767-0ef86a405307",
+        "created_at": "2024-11-16T03:04:36.588661",
+        "updated_at": "2024-11-16T03:04:36.588699",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.7d01053d-d046-47bb-b151-933d22c9842e": {
+        "id": "7d01053d-d046-47bb-b151-933d22c9842e",
+        "created_at": "2024-11-16T03:10:37.567893",
+        "updated_at": "2024-11-16T03:10:37.567919",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.91746ad8-92bf-4872-b80f-f6fb22d84bec": {
+        "id": "91746ad8-92bf-4872-b80f-f6fb22d84bec",
+        "created_at": "2024-11-16T03:18:59.260556",
+        "updated_at": "2024-11-16T03:18:59.260585",
         "__class__": "BaseModel"
     }
 }
