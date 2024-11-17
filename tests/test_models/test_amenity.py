@@ -1,61 +1,80 @@
 #!/usr/bin/python3
 """
-Test Suites for the amenity module
+This module contains Unit tests for the Amenity model
+which inherits from BaseModel
 """
 
-from models.amenity import Amenity
 import unittest
+from models.amenity import Amenity
 
 
-class TestAmenityModel(unittest.TestCase):
+class TestAmenity(unittest.TestCase):
     """
-    Test Cases for the Amenity model
+    Unit tests for the Amenity class
     """
 
-    @classmethod
     def setUp(self):
-        """setup resources to be used in the test"""
-        self.amenity = Amenity()
+        """
+        Set up method
+        """
+        self.test_amenity = Amenity()
 
-    @classmethod
     def tearDown(self):
-        """Tear down the resources after running the tests"""
-        del self.amenity
+        """
+        Tear down method for amenity tests
+        """
+        del self.test_amenity
 
-    def test_attributes(self):
-        """Test for attributes of the objects"""
-        self.assertTrue(hasattr(self.amenity, "name"))
+    def test_has_name_attribute(self):
+        """
+        Tests if the Amenity instance has a name attribute
+        """
+        self.assertTrue(hasattr(self.test_amenity, "name"))
 
-    def test_attribute_type(self):
-        """Assert that the attribute is of the right type"""
-        self.assertIsInstance(self.amenity.name, str)
+    def test_name_attribute_type(self):
+        """
+        Tests that the name attribute is a string
+        """
+        self.assertIsInstance(self.test_amenity.name, str)
 
-    def test_str_method(self):
-        """Test the __str__ method on the object"""
-        self.assertIsNotNone(self.amenity.__str__())
-        self.assertIn("[Amenity]", self.amenity.__str__())
+    def test_str_representation(self):
+        """
+        Ensures that the __str__ method returns the correct format
+        """
+        amenity_str = self.test_amenity.__str__()
+        self.assertIsNotNone(amenity_str)
+        self.assertIn("[Amenity]", amenity_str)
 
-    def test_to_dict_method(self):
-        """Test the to_dict method"""
-        amenity_dict = self.amenity.to_dict()
+    def test_to_dict_conversion(self):
+        """
+        Tests correctness of the to_dict method's output
+        """
+        amenity_dict = self.test_amenity.to_dict()
         self.assertIsInstance(amenity_dict, dict)
         self.assertIn("id", amenity_dict)
         self.assertIn("created_at", amenity_dict)
         self.assertIn("updated_at", amenity_dict)
         self.assertEqual(amenity_dict["__class__"], "Amenity")
 
-    def test_class_documentation(self):
-        """Test for the 'Amenity' class documentation"""
+    def test_class_has_docstring(self):
+        """
+        Tests if the Amenity class has documentation
+        """
         self.assertTrue(isinstance(Amenity.__doc__, str))
 
-    def test_module_documentation(self) -> None:
-        """Test documentation for the 'amenity' module"""
+    def test_module_has_docstring(self):
+        """
+        Verifies the amenity module has documentation
+        """
         self.assertIsNotNone(Amenity.__module__.__doc__)
 
-    def test_self_docuentation(self):
-        """Test documentation for this class"""
+    def test_test_class_has_docstring(self):
+        """
+        Ensures the test class has documentation
+        """
         self.assertIsNotNone(self.__class__.__doc__)
 
 
 if __name__ == "__main__":
     unittest.main()
+
