@@ -43,9 +43,7 @@ class HBNBCommand(cmd.Cmd):
             return
 
         class_name = args[0]
-        valid_classes = ["BaseModel", "User"]
-
-        if class_name not in valid_classes:
+        if class_name not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
             return
 
@@ -89,11 +87,10 @@ class HBNBCommand(cmd.Cmd):
             print("** instance id missing **")
             return
 
-        valid_classes = ["BaseModel", "User"]
         full_key = args[0] + "." + args[1]
         class_name = args[0]
 
-        if class_name not in valid_classes:
+        if class_name not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
             return
         objs = storage.all()
@@ -120,7 +117,7 @@ class HBNBCommand(cmd.Cmd):
             return
 
         class_name, obj_id = args
-        if class_name not in self.valid_classes:
+        if class_name not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
             return
 
@@ -144,7 +141,7 @@ class HBNBCommand(cmd.Cmd):
 
         if args:
             class_name = args[0]
-            if class_name not in self.valid_classes:
+            if class_name not in HBNBCommand.valid_classes:
                 print("** class doesn't exist **")
                 return
             print(
@@ -179,7 +176,7 @@ class HBNBCommand(cmd.Cmd):
             return
 
         class_name, obj_id, attr_name, attr_value = args[:4]
-        if class_name not in self.valid_classes:
+        if class_name not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
             return
 
