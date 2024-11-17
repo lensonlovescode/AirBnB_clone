@@ -90,7 +90,7 @@ class TestBaseModel(unittest.TestCase):
         """
         bm = BaseModel()
         old_created_at = bm.created_at
-        sleep(0.05)
+        sleep(0.7)
         bm.save()
         self.assertNotEqual(old_created_at, bm.created_at)
 
