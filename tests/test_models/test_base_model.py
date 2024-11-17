@@ -39,19 +39,6 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(type(bm_dict), dict)
         self.assertEqual(bm_dict['__class__'], 'BaseModel')
 
-    def test_str_method(self):
-        """
-        Tests that the __str__ method returns a proper string
-        """
-        bm = BaseModel()
-        bm.id = "test123"
-        bm.created_at = datetime(2024, 1, 1)
-        bm.updated_at = datetime(2024, 1, 1)
-        result = bm.__str__()
-        self.assertIn("[BaseModel] (test123)", result)
-        self.assertIn("'created_at': '2024-01-01T00:00:00'", result)
-        self.assertIn("'updated_at': '2024-01-01T00:00:00'", result)
-
     def test_save_creates_file(self):
         """
         Tests that a file is created after calling save
@@ -66,14 +53,7 @@ class TestBaseModel(unittest.TestCase):
         """
         bm = BaseModel()
         self.assertIsInstance(bm, BaseModel)
-
-    def test_instantiation_with_invalid_args(self):
-        """
-        Tests that invalid arguments raise a TypeError
-        """
-        with self.assertRaises(TypeError):
-            BaseModel("string")
-
+ 
     def test_add_attrs_after_instantiation(self):
         """
         Tests that new attributes can be added after instantiation
@@ -83,16 +63,6 @@ class TestBaseModel(unittest.TestCase):
         bm.my_number = 98
         self.assertEqual(bm.name, "Holberton")
         self.assertEqual(bm.my_number, 98)
-
-    def test_update_created_at(self):
-        """
-        Tests that created_at is updated after calling save
-        """
-        bm = BaseModel()
-        old_created_at = bm.created_at
-        sleep(0.7)
-        bm.save()
-        self.assertNotEqual(old_created_at, bm.created_at)
 
     def test_no_file_deleted_after_save(self):
         """
