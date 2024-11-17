@@ -2,7 +2,8 @@
     "BaseModel.947ff3c4-35b2-45bb-a7d4-de76f3687a0d": {
         "id": "947ff3c4-35b2-45bb-a7d4-de76f3687a0d",
         "created_at": "2024-11-14T17:05:08.988019",
-        "updated_at": "2024-11-14T17:05:08.988039",
+        "updated_at": "2024-11-17T10:44:04.528393",
+        "email": "lensonisinparis@gmail.com",
         "__class__": "BaseModel"
     },
     "BaseModel.ce2beeec-4f01-4566-b8ce-86937d9a5ccd": {
@@ -290,12 +291,6 @@
         "id": "7d01053d-d046-47bb-b151-933d22c9842e",
         "created_at": "2024-11-16T03:10:37.567893",
         "updated_at": "2024-11-16T03:10:37.567919",
-        "__class__": "BaseModel"
-    },
-    "BaseModel.91746ad8-92bf-4872-b80f-f6fb22d84bec": {
-        "id": "91746ad8-92bf-4872-b80f-f6fb22d84bec",
-        "created_at": "2024-11-16T03:18:59.260556",
-        "updated_at": "2024-11-16T03:18:59.260585",
         "__class__": "BaseModel"
     }
 }

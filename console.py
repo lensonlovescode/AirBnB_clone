@@ -8,6 +8,11 @@ and delete objects for various classes in the project
 import cmd
 from models.base_model import BaseModel
 from models.user import User
+from models.place import Place
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.review import Review
 from models import storage
 
 
@@ -25,12 +30,6 @@ class HBNBCommand(cmd.Cmd):
                      "Amenity",
                      "Review"
                      )
-
-    def do_greet(self, arg):
-        """
-        Creates a new instance of a given class and saves it.
-        """
-        print("Hi!")
 
     def do_create(self, arg):
         """
@@ -57,6 +56,7 @@ class HBNBCommand(cmd.Cmd):
     def do_quit(self, arg):
         """
         Quit command to exit the program.
+        Usage: quit
         """
         return True
 
@@ -64,6 +64,7 @@ class HBNBCommand(cmd.Cmd):
         """
         Exit the program once end of file.
         """
+        print("")
         return True
 
     def emptyline(self):
@@ -108,6 +109,7 @@ class HBNBCommand(cmd.Cmd):
         """
         Deletes an instance based on the class name and id.
         Then saves the changes into the JSON file.
+        Usage: destroy BaseModel 1234-1234-1234
         """
         args = arg.split()
         if len(args) < 1:
@@ -135,6 +137,7 @@ class HBNBCommand(cmd.Cmd):
         """
         prints all string representation of all instances based or
         not on the class name.
+        Usage: (hbnb) all BaseModel or (hbnb) all
         """
         args = arg.split()
         objs = storage.all()
@@ -159,6 +162,7 @@ class HBNBCommand(cmd.Cmd):
         Updates an instance based on the class name and
         id by adding or updating attribute,
         and saves the changes into the JSON file.
+        Usage: (hbnb) update BaseModel 1234-1234-1234 email "aibnb@mail.com"
         """
         args = arg.split()
         if len(args) < 1:
