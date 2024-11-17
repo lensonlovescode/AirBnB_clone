@@ -30,11 +30,12 @@ class BaseModel:
         attribute from the key-value pairs. Otherwise,
         it should generate a new ID and set created_at and updated_at.
         """
+        format = '%Y-%m-%dT%H:%M:%S.%f'
         if kwargs:
             for key, value in kwargs.items():
                 if key != "__class__":
                     if key == "created_at" or key == "updated_at":
-                        setattr(self, key, datetime.fromisoformat(value))
+                        setattr(self, key, datetime.strptime(value, format))
                     else:
                         setattr(self, key, value)
             if 'id' not in kwargs:
