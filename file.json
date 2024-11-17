@@ -263,10 +263,11 @@
     "User.e0a1d892-db08-41d3-9ed1-a9d8b448eef2": {
         "id": "e0a1d892-db08-41d3-9ed1-a9d8b448eef2",
         "created_at": "2024-11-16T02:17:10.432193",
-        "updated_at": "2024-11-16T02:17:10.432221",
+        "updated_at": "2024-11-17T14:56:30.158410",
         "first_name": "John",
         "email": "airbnb2@mail.com",
         "password": "root",
+        "e-mail": "someone@example.com",
         "__class__": "User"
     },
     "BaseModel.cf4532c0-a1c9-4558-9276-9e951e8e3e48": {
