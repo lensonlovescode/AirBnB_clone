@@ -163,7 +163,7 @@ class HBNBCommand(cmd.Cmd):
         """
         args = arg.split()
         if len(args) < 1:
-            print("** class name missinf **")
+            print("** class name missing **")
             return
         if len(args) == 1:
             print("** instance id missing **")
@@ -197,7 +197,7 @@ class HBNBCommand(cmd.Cmd):
         except ValueError:
             pass
 
-        if attr_name not in ['id,' 'created_at', 'updated_at']:
+        if attr_name not in ['id', 'created_at', 'updated_at']:
             setattr(obj, attr_name, attr_value)
             obj.save()
 
