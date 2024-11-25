@@ -68,12 +68,6 @@
     margin-bottom: 19px;
     margin-left: 12%;
 }
-.filters ul
-{
-    display: none;
-    list-style: none;
-    
-}
 .filters .popover ul
 {
     margin-bottom: 20px;
@@ -86,6 +80,8 @@
     width: 100%;
     border: solid #DDDDDD 1px;
     border-radius: 4px;
+    display: none;
+    list-style: none;
 }
 .popover h2
 {
